@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-content">
+      <a href="#" class="brand">🍳 RecipeFinder</a>
+      <button id="favorite-button" class="favorite-button">
+        ❤️ Favorites <span id="favorite-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">🔥 RECIPE FINDER APP</p>
+        <h1>Find your favorite recipe all over the world</h1>
+        <p class="hero-description">Find simple recipes from around the world.</p>
+
+        <form id="search-form" class="search-form">
+          <input type="search" id="search-input" placeholder="Search recipes (e.g. Pizza, Burger)...">
+          <button type="submit" id="search-btn">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="recipes-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="section-label">DISCOVER</p>
+            <h2>Explore Recipes</h2>
+          </div>
+          <div class="results-summary">
+            <p id="recipe-count">0 recipes</p>
+            <button id="reset-btn" class="reset-btn" style="display: none;">🔄 Reset</button>
+          </div>
+        </div>
+
+        <!-- Grid Kartu Resep -->
+        <div id="recipe-grid" class="recipe-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal / Pop-up Detail Resep -->
+  <dialog id="recipe-dialog">
+    <button id="close-dialog" class="close-dialog">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
